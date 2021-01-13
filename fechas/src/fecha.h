@@ -17,5 +17,25 @@ const string kHelpText = "./fechas - Gestión de fechas";
 const string kHelpText2 = "Modo de uso: ./fechas fichero_entrada.txt fichero_salida.txt";
 
 void Usage (int argc, char* argv []);
-class Fecha;
-vector <int> orden_fechas (string texto);
+vector <Fecha> sacar_fechas (string texto);
+string orden_fechas (vector <Fecha> fechas_guardadas);
+	
+#ifndef FECHA_H
+#define FECHA_H
+
+class Fecha {
+ private:
+  int dia_ {};
+  int mes_ {};
+  int año_ {};
+
+ public:
+  Fecha(int dia, int mes, int año);
+  void SetFecha (int dia, int mes, int año);
+  int dia() { return dia_; }
+  int mes() { return mes_; }
+  int año() { return año_; }
+  bool bisiestro (int año);
+};
+
+#endif
