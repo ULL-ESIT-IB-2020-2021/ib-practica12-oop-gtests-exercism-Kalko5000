@@ -15,6 +15,7 @@
 #include <string>
 #include <cstdlib>
 #include "fecha.h"
+#include "fecha.cc"
 using namespace std;
 
 int main (int argc, char* argv[]) {
@@ -32,6 +33,6 @@ int main (int argc, char* argv[]) {
   }
 
   FicheroSalida.open (fichero_salida);
-  FicheroSalida << ;
+  FicheroSalida << orden_fechas;
   FicheroSalida.close (); 
 }

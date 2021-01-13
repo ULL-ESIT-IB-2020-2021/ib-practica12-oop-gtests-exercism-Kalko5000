@@ -13,6 +13,7 @@
 #include <iostream>
 #include <fstream>
 #include <string>
+#include <vector>
 #include "fecha.h"
 using namespace std;
 
@@ -53,4 +54,32 @@ class Fecha {
   int dia() const { return dia_; }
   int mes() const { return mes_; }
   int año() const { return año_; }
+  bool bisiestro (int año) {
+    if (año % 4 == 0) {
+      return true;
+    } else if (año % 100 == 0) {
+      return false;
+    } else if (año % 400 == 0) {
+      return true;
+    } else {
+      return false;
+    }
+  }
 };
+
+vector <int> orden_fechas (string texto) {
+  int i {0};
+  for (i = 0; i < texto.length(); i++) {
+    if (texto[i] >= char(48) && texto[i] <= char(57)) {
+      if (texto[i + 2] == '/') {
+        int dia = texto[i] + texto[i + 1];
+        int mes = texto[i + 3] + texto[i + 4];
+        int año = texto[i + 6] + texto[i + 7] + texto[i + 8] + texto[i + 9];
+        Fecha fecha (dia, mes, año);
+        vector <int> fechas_guardadas;
+        fechas_guardadas.assign (1, fecha);
+        i = i + 7;
+      }
+    }
+  }
+}

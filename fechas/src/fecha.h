@@ -18,3 +18,4 @@ const string kHelpText2 = "Modo de uso: ./fechas fichero_entrada.txt fichero_sal
 
 void Usage (int argc, char* argv []);
 class Fecha;
+vector <int> orden_fechas (string texto);

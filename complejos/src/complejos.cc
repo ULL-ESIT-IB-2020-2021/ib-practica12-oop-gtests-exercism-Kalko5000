@@ -15,8 +15,16 @@
 #include <string>
 #include <cstdlib>
 #include "complejo.h"
+#include "complejo.cc"
 using namespace std;
 
-int main (int argc,char* argv[]) {
-    
+int main (int argc, int argv[]) {
+  Usage (argc, argv);
+  Complejo complejo1 (argv[2], argv[3]);
+  Complejo complejo2 (argv[4], argv[5]);
+  Complejo resultado;
+  resultado = Add(complejo1, complejo2);
+  resultado.Print();
+  resultado = Sub(complejo1, complejo2);
+  resultado.Print();
 }
