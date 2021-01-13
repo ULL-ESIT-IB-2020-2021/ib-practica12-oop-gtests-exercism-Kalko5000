@@ -16,17 +16,27 @@
 #include "complejo.h"
 using namespace std;
 
+/** Muestra el modo de uso correcto del programa
+ *  En caso de que el uso no sea el correcto, muestra el mensaje y finaliza
+ *  la ejecución del programa.
+ *  El programa requiere un minimo de 5 parámetros para su ejecución;
+ *
+ *  @param[in] argc Numero de parametros en la línea de codigo
+ *  @param[in] argv int que contiene los numeros insertados por el usuario
+ */
+
 void Usage(int argc, int argv[]) {
   if (argc != 5) {
     cout << "Modo incorrecto de uso" << endl;
     cout << "Pruebe: " << argv[0] << " --help para más información" << endl;
   }
-  if (argc == 2) {
+  if (argc == 2) { /** Usé argc en vez de argv ya que es "int" en vez del vector char* */
       cout << kHelpText << endl;
       cout << kHelpText2 << endl;
       exit(EXIT_SUCCESS);
   }
 }
+ /** Definiciones del constructor y miembro "Print" de la clase Complejos */
 
 Complejo::Complejo(int real = 0, int imaginario = 01) {
   SetComplejo(real_, imaginario_); 
@@ -36,6 +46,8 @@ void Complejo::Print () {
     cout << real_ << " + (" << imaginario_ << ")i";
   }
 
+/** Función Add empleada para la suma de los complejos */
+
 Complejo Add (Complejo complejo1, Complejo complejo2) {
     int real1 = complejo1.getReal();
     int img1 = complejo1.getImaginario();
@@ -44,6 +56,8 @@ Complejo Add (Complejo complejo1, Complejo complejo2) {
     Complejo suma {real1 + real2, img1 + img2};
     return suma;
 }
+
+/** Función Sub empleada para la suma de los complejos */
 
   Complejo Sub (Complejo complejo1, Complejo complejo2) {
     int real1 = complejo1.getReal();
