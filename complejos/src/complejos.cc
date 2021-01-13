@@ -18,10 +18,19 @@
 #include "complejo.cc"
 using namespace std;
 
-int main (int argc, int argv[]) {
+int main (int argc, char *argv[]) {
+  cout << "Este programa perfmite sumar y restar con numeros complejos." << endl;
   Usage (argc, argv);
-  Complejo complejo1 (argv[2], argv[3]);
-  Complejo complejo2 (argv[4], argv[5]);
+  string real1_string = argv[2];
+  int real1 = int(real1);
+  string img1_string = argv[3];
+  int img1 = int(img1);
+  string real2_string = argv[4];
+  int real2 = int(real2);
+  string img2_string = argv[4];
+  int img2 = int(img2);
+  Complejo complejo1 (real1, img1);
+  Complejo complejo2 (real2, img2);
   Complejo resultado;
   resultado = Add(complejo1, complejo2);
   resultado.Print();

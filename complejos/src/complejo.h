@@ -17,7 +17,7 @@ const string kHelpText = "Este programa requiere 4 parametros adicionales para f
 const string kHelpText2 = "primer numero real / primer numero imaginario / segundo \
 numero real / segundo numero imaginario";
 
-void Usage (int argc, char *argv[]);
+void Usage (int argc, char* argv[]);
 Complejo Add (Complejo complejo1, Complejo complejo2);
 Complejo Sub (Complejo complejo1, Complejo complejo2);
 	

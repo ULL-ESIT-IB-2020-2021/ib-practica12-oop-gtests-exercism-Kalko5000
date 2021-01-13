@@ -25,12 +25,13 @@ using namespace std;
  *  @param[in] argv int que contiene los numeros insertados por el usuario
  */
 
-void Usage(int argc, int argv[]) {
+void Usage(int argc, char* argv[]) {
   if (argc != 5) {
     cout << "Modo incorrecto de uso" << endl;
     cout << "Pruebe: " << argv[0] << " --help para más información" << endl;
   }
-  if (argc == 2) { /** Usé argc en vez de argv ya que es "int" en vez del vector char* */
+  string parametro {argv[1]};
+  if (parametro == "--help") { 
       cout << kHelpText << endl;
       cout << kHelpText2 << endl;
       exit(EXIT_SUCCESS);

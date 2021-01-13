@@ -19,6 +19,8 @@
 using namespace std;
 
 int main (int argc, char* argv[]) {
+  cout << "El siguiente programa analiza las fechas de un fichero y las mete en otro "
+       << "ordenadas de mayor a menor." << endl;
   Usage (argc, argv);
   string fichero_entrada = argv[1];
   string fichero_salida = argv[2];
