@@ -5,9 +5,10 @@
  * Informática Básica
  *
  * @author Thomas Edward Bradley
- * @date 12.jan.2020
+ * @date 14.jan.2020
  * @brief Contiene las declaraciones de las clases y funciones localizadas en 
- *        "complejo.cc" y a la vez el contenido del string kHelpText
+ *        "complejo.cc" y a la vez el contenido del string kHelpText (con
+ *        modificacion)
  */
 
 #include <iostream>
@@ -19,8 +20,8 @@ numero real / segundo numero imaginario";
 
 void Usage (int argc, char* argv[]);
 	
-#ifndef COMPLEJO_H
-#define COMPLEJO_H
+#ifndef MOD_COMPLEJO_H
+#define MOD_COMPLEJO_H
 
 class Complejo {
  private:
